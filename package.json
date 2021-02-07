@@ -1,15 +1,34 @@
 {
-  "name": "flow-chart",
-  "version": "0.1.0",
-  "private": true,
+  "name": "grid-flow-chart",
+  "version": "0.1.1",
+  "private": false,
+  "main": "dist/grid-flow-chart.umd.min.js",
+  "module": "dist/grid-flow-chart.umd.min.js",
+  "keywords": [
+    "flowChart",
+    "super flow",
+    "vue flow chart",
+    "vue 流程图"
+  ],
+  "license": "MIT",
+  "files": [
+    "/dist/grid-flow-chart.umd.min.js",
+    "README.md",
+    "LICENSE",
+    "types/*"
+  ],
+  "types": "./types/index.d.ts",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
+    "build-lib": "vue-cli-service build --target lib --name grid-flow-chart src/components/index.ts",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@svgdotjs/svg.js": "^3.0.16",
     "core-js": "^3.6.5",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "vue": "^3.0.0"
   },
   "devDependencies": {
